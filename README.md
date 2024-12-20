@@ -50,6 +50,10 @@ The repository is organized into multiple sections, each demonstrating the funct
 
 ### 7. **Serial Peripheral Interface (SPI)**
    - Explains how to configure and use the SPI protocol on the LPC1768 for communication with SPI-compatible devices.
+   - This section contains two file:
+      - `switch.c`: This code configures a GPIO pin to control a buzzer and another pin to read the state of a switch on the LPC1768 microcontroller. When the switch is pressed (input high), the buzzer is turned on; otherwise, the buzzer is turned off.
+      - `two_switch.c`: This code configures two switches (SW1 and SW2) and a buzzer along with a set of LEDs on the LPC1768 microcontroller. When SW1 is pressed, the buzzer is turned on, and when SW2 is pressed, all the LEDs are turned on; otherwise, both the buzzer and LEDs are turned off.
+
    - Applications: Communication with sensors, memory devices, and displays requiring high-speed data transfer.
 
 ### 8. **Switches**
