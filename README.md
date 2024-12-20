@@ -50,6 +50,16 @@ The repository is organized into multiple sections, each demonstrating the funct
 
 ---
 
+## Datasheet and Schematic Diagram
+
+This repository also includes:
+- **LPC1768 Datasheet:** A comprehensive document containing technical specifications, pin configurations, and functional details of the LPC1768 microcontroller.
+- **Schematic Diagram:** A detailed circuit schematic to help users understand hardware connections and get references while exploring the code examples.
+
+These resources are located in the `Datasheet` folder and are invaluable for both beginners and advanced users in understanding the microcontroller's architecture and peripheral interfacing.
+
+---
+
 ## Getting Started
 
 1. Clone the repository:
@@ -81,7 +91,3 @@ Contributions are welcome! If you have additional examples or improvements to sh
 ## License
 
 This repository is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
-Feel free to adapt the content to match your specific project structure or preferences. Let me know if you need further adjustments!
