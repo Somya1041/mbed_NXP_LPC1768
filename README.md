@@ -18,6 +18,10 @@ The repository is organized into multiple sections, each demonstrating the funct
 
 ### 2. **Buzzer**
    - Explains how to control a buzzer using GPIO pins on the LPC1768.
+   - This section contains two file:
+      - `buzzer.c`: This code toggles a buzzer connected to pin P1.27 of the LPC1768 microcontroller by setting and clearing the GPIO pin in a loop with a 250 ms delay. This creates a periodic on-off sound from the buzzer.
+      - `rand_buzzer.c`: This code controls a buzzer connected to pin P1.27 of the LPC1768 microcontroller, toggling it on and off with random delays between 100 ms and 1000 ms. It generates 10 iterations of random on-off patterns using the `rand()` function for the delay intervals.
+
    - Applications: Audio notifications, alarms, and feedback systems.
 
 ### 3. **Count_Display**
