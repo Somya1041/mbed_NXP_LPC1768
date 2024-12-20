@@ -10,6 +10,10 @@ The repository is organized into multiple sections, each demonstrating the funct
 
 ### 1. **ADC (Analog-to-Digital Converter)**
    - Demonstrates the use of the LPC1768's built-in ADC module to convert analog signals into digital values.
+   - This section contains two file:
+      - `adc_temp_read.c`: This code reads temperature data from an ADC channel on the LPC1768 microcontroller, converts the ADC value to voltage, and calculates the temperature. It then displays the temperature on an LCD in Celsius using the LCD module's API.
+      - `adc_2_uart.c`: This code reads temperature data from an ADC channel on the LPC1768 microcontroller, converts the ADC value to voltage, calculates the temperature, and transmits the temperature data as a string via **UART0**. It uses UART for communication, making it suitable for serial data logging or monitoring.
+   
    - Applications: Sensor interfacing, signal monitoring, and analog data processing.
 
 ### 2. **Buzzer**
