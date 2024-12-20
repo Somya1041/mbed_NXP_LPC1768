@@ -26,7 +26,7 @@ The repository is organized into multiple sections, each demonstrating the funct
 
 ### 3. **Count_Display**
    - Implements a simple counter displayed on a 7-segment display or similar output device.
-   - This section contains 1 header file, 1 functions definition file and 2 application files using these header and definitions file.
+   - This section contains one header file, one functions definition file and two application files using these header and definitions file.
       ### Header File:
       - `count.h`: This is the header file which contains macros definition for the control and data pins, along with function prototypes for delay, sending commands, writing data, writing strings, and initializing the LCD. These functions enable interaction with the LCD for displaying information.
 
@@ -36,10 +36,25 @@ The repository is organized into multiple sections, each demonstrating the funct
       ### Application Files: 
       - `count_app.c`: This is application file which initializes an LCD and displays a 2-digit counter on it, incrementing the count every 100 milliseconds. The counter resets to 0 after reaching 99, and the LCD cursor is repositioned to overwrite the previous count.
       - `timer_dis_app.c`: This is application file which initializes an LCD to display a digital clock that updates every second. It tracks hours, minutes, and seconds, incrementing appropriately and resetting at 60 seconds, 60 minutes, and 24 hours to maintain a 24-hour clock format.
+
    - Applications: Event counting, time tracking, and user feedback.
 
 ### 4. **LCD_Display**
    - Shows how to interface and display data on an LCD using the LPC1768.
+   - This section contains two files and one application folder, which includes an application file that uses the header and functions definition file that are defined separately.
+      - `lcd_dis.c`: This code initializes an LCD in 8-bit mode and displays the text "SOMYA ANAND" on the first line, followed by "SUNNY KR" on the second line after a delay. Finally, the LCD screen is cleared after displaying the content for a set duration.
+      - `date_time_dis.c`: This code initializes an LCD display in 8-bit mode, then displays the year on the first line and the temperature on the second line. It uses formatted strings to display values and clears the screen after the display. It controls the LCD using GPIO pins and handles delays for proper timing.
+
+      ### Application Folder:
+      #### Header File:
+      - `lcd.h`: This is the header file which defines functions to control an LCD display using GPIO pins on the LPC1768 microcontroller. It includes functions for sending commands, displaying data, and initializing the LCD. The LCD control uses 8-bit mode for communication with the display, and delay functions are used for timing control.
+         
+         ### Functions Definition File:
+         - `lcd_def.c`:
+         
+         ## Application File:
+         - `lcd_app.c`:
+
    - Applications: User interfaces, data visualization, and debugging.
 
 ### 5. **Matrix_Keypad**
