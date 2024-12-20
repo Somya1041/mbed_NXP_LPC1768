@@ -31,11 +31,11 @@ The repository is organized into multiple sections, each demonstrating the funct
       - `count.h`: This is the header file which contains macros definition for the control and data pins, along with function prototypes for delay, sending commands, writing data, writing strings, and initializing the LCD. These functions enable interaction with the LCD for displaying information.
 
       ### Functions Definition File:
-      - `count_def.c`: This is the functions definition file which defines the functions for sending commands (`cmd_reg`), writing data (`data_reg`), displaying strings (`string_write`), and initializing the LCD (`lcd_init`). Additionally, it uses a delay function to ensure proper timing for LCD operations.
+      - `count_def.c`: This is the function definition file that defines the functions for sending commands (`cmd_reg`), writing data (`data_reg`), displaying strings (`string_write`), and initializing the LCD (`lcd_init`). Additionally, it uses a delay function to ensure proper timing for LCD operations.
 
       ### Application Files: 
-      - `count_app.c`: This is application file which initializes an LCD and displays a 2-digit counter on it, incrementing the count every 100 milliseconds. The counter resets to 0 after reaching 99, and the LCD cursor is repositioned to overwrite the previous count.
-      - `timer_dis_app.c`: This is application file which initializes an LCD to display a digital clock that updates every second. It tracks hours, minutes, and seconds, incrementing appropriately and resetting at 60 seconds, 60 minutes, and 24 hours to maintain a 24-hour clock format.
+      - `count_app.c`: This is the application file which initializes an LCD and displays a 2-digit counter on it, incrementing the count every 100 milliseconds. The counter resets to 0 after reaching 99, and the LCD cursor is repositioned to overwrite the previous count.
+      - `timer_dis_app.c`: This is the application file which initializes an LCD to display a digital clock that updates every second. It tracks hours, minutes, and seconds, incrementing appropriately and resetting at 60 seconds, 60 minutes, and 24 hours to maintain a 24-hour clock format.
 
    - Applications: Event counting, time tracking, and user feedback.
 
@@ -47,13 +47,13 @@ The repository is organized into multiple sections, each demonstrating the funct
 
       ### Application Folder:
       #### Header File:
-      - `lcd.h`: This is the header file which defines functions to control an LCD display using GPIO pins on the LPC1768 microcontroller. It includes functions for sending commands, displaying data, and initializing the LCD. The LCD control uses 8-bit mode for communication with the display, and delay functions are used for timing control.
+      - `lcd.h`: This is the header file that defines function prototypes to control an LCD display using GPIO pins on the LPC1768 microcontroller. It includes function prototypes for sending commands, displaying data, and initializing the LCD. The LCD control uses 8-bit mode for communication with the display, and delay functions are used for timing control.
          
       #### Functions Definition File:
-      - `lcd_def.c`:
+      - `lcd_def.c`: This is the function definition file that defines the functions for sending commands (`cmd_reg`), writing data (`data_reg`), displaying strings (`string_write`), and initializing the LCD (`lcd_init`). Additionally, it uses a delay function to ensure proper timing for LCD operations.
          
       #### Application File:
-      - `lcd_app.c`:
+      - `lcd_app.c`: This is the application file that initializes the LCD display, sets it to 8-bit mode, and displays the names "SOMYA ANAND" and "SUNNY KR" on two lines. It includes a 2-second delay between the names and clears the screen after displaying them. The display operates with basic commands for setting the cursor and clearing the screen.
 
    - Applications: User interfaces, data visualization, and debugging.
 
