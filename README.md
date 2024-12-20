@@ -6,7 +6,7 @@ The repository is organized into multiple sections, each demonstrating the funct
 
 ---
 
-## Walkthrough of Repository Sections
+# Walkthrough of Repository Sections
 
 ### 1. **ADC (Analog-to-Digital Converter)**
    - Demonstrates the use of the LPC1768's built-in ADC module to convert analog signals into digital values.
@@ -71,7 +71,6 @@ These resources are located in the `Datasheet` folder and are invaluable for bot
    git clone https://github.com/Somya1041/NXP_LPC1768.git
    ```
 2. Navigate to the desired section to explore code examples and project files.
-3. Follow the instructions provided in each section's folder to set up and run the examples.
 
 ---
 
