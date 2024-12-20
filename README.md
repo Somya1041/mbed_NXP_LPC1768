@@ -92,10 +92,10 @@ The repository is organized into multiple sections, each demonstrating the funct
       - `timer0_delay.c`: This code initializes Timer-0 with a 2-second delay using a specified timer count and a repeat mode. It sets up GPIO1 pins to control all LEDs and toggles them on and off at regular intervals. The timer's interrupt flag is checked to determine when the delay has elapsed, at which point the LEDs are toggled and the timer is reset.
       - `timer_seq.c`: This code configures Timer-0 to generate multiple time intervals (1s, 5s, 8s, and 10s) and uses these intervals to sequentially turn on different LEDs connected to GPIO1 pins. It checks the timer interrupt flags to determine when to toggle each LED and ensure proper timing and sequencing. The LEDs are turned on one by one, with all LEDs lit at the final interval.
 
-   ### Real Time Clock (RTC) Folder:
-   - `rtc.c`: This code initializes the RTC (Real-Time Clock) on the LPC1768 microcontroller, setting a specific time and date. It then continuously reads the current time and date from the RTC, formats the values, and displays them on an LCD. The time is displayed on the first line and the date on the second line of the LCD.
-   - `rtc_alarm.c`: This code configures the RTC (Real-Time Clock) on the LPC1768 microcontroller to set a specific time and date, with an alarm set to trigger at midnight. It continuously displays the current time and date on an LCD. When the time matches the alarm time, the buzzer is activated.
-   - `rtc_new_year.c`: This code configures the RTC on the LPC1768 microcontroller to set the time and date, with an alarm set to trigger at midnight. When the current time matches the alarm time, the buzzer is activated, and a "HAPPY NEW YEAR!" message is displayed on the LCD. The buzzer is turned off otherwise.
+      ### Real Time Clock (RTC) Folder:
+      - `rtc.c`: This code initializes the RTC (Real-Time Clock) on the LPC1768 microcontroller, setting a specific time and date. It then continuously reads the current time and date from the RTC, formats the values, and displays them on an LCD. The time is displayed on the first line and the date on the second line of the LCD.
+      - `rtc_alarm.c`: This code configures the RTC (Real-Time Clock) on the LPC1768 microcontroller to set a specific time and date, with an alarm set to trigger at midnight. It continuously displays the current time and date on an LCD. When the time matches the alarm time, the buzzer is activated.
+      - `rtc_new_year.c`: This code configures the RTC on the LPC1768 microcontroller to set the time and date, with an alarm set to trigger at midnight. When the current time matches the alarm time, the buzzer is activated, and a "HAPPY NEW YEAR!" message is displayed on the LCD. The buzzer is turned off otherwise.
    
    - Applications: Time-sensitive operations, event scheduling, and real-time applications.
 
@@ -105,17 +105,17 @@ The repository is organized into multiple sections, each demonstrating the funct
       - `uart0_rx.c`: This code initializes UART0 for serial communication and configures the LCD to display received characters. It continuously reads incoming data from UART0 and writes each received character to the LCD. The UART0 is configured with a baud rate of 9600.
       - `uart0_tx.c`: This code initializes UART0 for serial communication and transmits characters from 'A' to 'Z' over UART0 with a baud rate of 9600. Each character is sent with a delay between transmissions to ensure proper timing for data transmission.
 
-   ### Application Folder:
-   #### Header File:
-   - `uart0.h`: This is the header file that defines UART0 communication on the LPC1768 microcontroller, declaring functions for initializing UART, transmitting and receiving bytes and strings, handling delays, and sending a newline character. It sets up the necessary functionality for serial communication.
+      ### Application Folder:
+      #### Header File:
+      - `uart0.h`: This is the header file that defines UART0 communication on the LPC1768 microcontroller, declaring functions for initializing UART, transmitting and receiving bytes and strings, handling delays, and sending a newline character. It sets up the necessary functionality for serial communication.
 
-   #### Functions Definition File:
-   - `uart0_def.c`: This is the function definition file that implements UART0 communication functions for the LPC1768 microcontroller, including initialization (`uart0_init`), transmitting (`uart0_byte_transmit`) and receiving bytes (`uart0_byte_receive`), sending strings (`uart0_str_transmit`), and handling delays (`delay`). It also includes a function to transmit a newline character (`new_line`) and configure the UART with specific settings like baud rate, data bits, and stop bits.
+      #### Functions Definition File:
+      - `uart0_def.c`: This is the function definition file that implements UART0 communication functions for the LPC1768 microcontroller, including initialization (`uart0_init`), transmitting (`uart0_byte_transmit`) and receiving bytes (`uart0_byte_receive`), sending strings (`uart0_str_transmit`), and handling delays (`delay`). It also includes a function to transmit a newline character (`new_line`) and configure the UART with specific settings like baud rate, data bits, and stop bits.
 
-   #### Application File:
-   - `uart_app.c`: The code initializes UART0 communication on the LPC1768 microcontroller and transmits a character, a string, and a formatted float value via UART. It uses the functions from the  `uart0.h` library to handle byte and string transmission, with delays between each transmission.
-   
-   - Applications: Communication with sensors, modules, or other microcontrollers.
+      #### Application File:
+      - `uart_app.c`: The code initializes UART0 communication on the LPC1768 microcontroller and transmits a character, a string, and a formatted float value via UART. It uses the functions from the  `uart0.h` library to handle byte and string transmission, with delays between each transmission.
+      
+      - Applications: Communication with sensors, modules, or other microcontrollers.
 
 ### 11. **Watchdog Timer**
    - Explains how to configure and use the Watchdog Timer to reset the system in case of a software fault.
