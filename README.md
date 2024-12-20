@@ -46,13 +46,13 @@ The repository is organized into multiple sections, each demonstrating the funct
       - `date_time_dis.c`: This code initializes an LCD display in 8-bit mode, then displays the year on the first line and the temperature on the second line. It uses formatted strings to display values and clears the screen after the display. It controls the LCD using GPIO pins and handles delays for proper timing.
 
       ### Application Folder:
-      #### Header File:
-      - `lcd.h`: This is the header file which defines functions to control an LCD display using GPIO pins on the LPC1768 microcontroller. It includes functions for sending commands, displaying data, and initializing the LCD. The LCD control uses 8-bit mode for communication with the display, and delay functions are used for timing control.
+         #### Header File:
+         - `lcd.h`: This is the header file which defines functions to control an LCD display using GPIO pins on the LPC1768 microcontroller. It includes functions for sending commands, displaying data, and initializing the LCD. The LCD control uses 8-bit mode for communication with the display, and delay functions are used for timing control.
          
-         ### Functions Definition File:
+         #### Functions Definition File:
          - `lcd_def.c`:
          
-         ## Application File:
+         #### Application File:
          - `lcd_app.c`:
 
    - Applications: User interfaces, data visualization, and debugging.
