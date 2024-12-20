@@ -34,6 +34,10 @@ The repository is organized into multiple sections, each demonstrating the funct
 
 ### 5. **Matrix_Keypad**
    - Provides code for interfacing a matrix keypad and reading user input.
+   - This section contains two file:
+      - `keypress.c`: This code interfaces a 4x4 matrix keypad with the LPC1768 microcontroller to detect key presses. It scans the keypad rows and columns, identifies the pressed key, and displays the corresponding character on the LCD.
+      - `password_check.c`: This code implements a password authentication system using a 4x4 matrix keypad with the LPC1768 microcontroller. It prompts the user to enter a password, compares the entered password with a predefined correct password, and displays a message on the LCD indicating whether the password is correct or wrong.
+
    - Applications: Keypads for user interaction, input systems, and security applications.
 
 ### 6. **Pulse Width Modulation (PWM)**
