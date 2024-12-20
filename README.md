@@ -27,7 +27,10 @@ The repository is organized into multiple sections, each demonstrating the funct
 ### 3. **Count_Display**
    - Implements a simple counter displayed on a 7-segment display or similar output device.
    - This section contains 1 header file, 1 functions definition file and 2 application files using these header and definitions file.
+      ### Header File:
       - `count.h`: This is the header file which contains macros definition for the control and data pins, along with function prototypes for delay, sending commands, writing data, writing strings, and initializing the LCD. These functions enable interaction with the LCD for displaying information.
+
+      ### Functions Definition File:
       - `count_def.c`: This is the functions definition file which defines the functions for sending commands (`cmd_reg`), writing data (`data_reg`), displaying strings (`string_write`), and initializing the LCD (`lcd_init`). Additionally, it uses a delay function to ensure proper timing for LCD operations.
 
       ### Application Files: 
