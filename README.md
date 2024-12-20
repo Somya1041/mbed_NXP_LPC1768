@@ -42,6 +42,10 @@ The repository is organized into multiple sections, each demonstrating the funct
 
 ### 6. **Pulse Width Modulation (PWM)**
    - Demonstrates generating PWM signals using the LPC1768.
+   - This section contains two file:
+      - `pwm_single_edge.c`: This code configures PWM1 on the LPC1768 microcontroller to generate a PWM signal with varying duty cycles (20%, 40%, 60%, and 80%) at a frequency of 100 Hz. It repeatedly adjusts the duty cycle by modifying the value of the matching register (MR2) and enables the changes through the LER register, creating a pattern of different duty cycles over time.
+      - `pwm_double_edge.c`: This code configures PWM1 on the LPC1768 microcontroller to generate a PWM signal with varying duty cycles (20%, 40%, 60%, and 70%) at a frequency of 100 Hz, using double-edge mode for PWM1. It continuously adjusts the signal's rising and falling edges by modifying the matching registers (MR1 and MR2), creating a pattern of different duty cycles over time.
+
    - Applications: Motor control, LED brightness control, and power management.
 
 ### 7. **Serial Peripheral Interface (SPI)**
