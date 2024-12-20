@@ -32,19 +32,23 @@ The repository is organized into multiple sections, each demonstrating the funct
    - Demonstrates generating PWM signals using the LPC1768.
    - Applications: Motor control, LED brightness control, and power management.
 
-### 7. **Switches**
+### 7. **Serial Peripheral Interface (SPI)**
+   - Explains how to configure and use the SPI protocol on the LPC1768 for communication with SPI-compatible devices.
+   - Applications: Communication with sensors, memory devices, and displays requiring high-speed data transfer.
+
+### 8. **Switches**
    - Covers reading and debouncing switch inputs with the LPC1768.
    - Applications: User inputs, control panels, and interactive systems.
 
-### 8. **Timer**
+### 9. **Timer**
    - Showcases the use of timers for generating delays, measuring time intervals, and periodic task execution.
    - Applications: Time-sensitive operations, event scheduling, and real-time applications.
 
-### 9. **UART (Universal Asynchronous Receiver-Transmitter)**
+### 10. **UART (Universal Asynchronous Receiver-Transmitter)**
    - Demonstrates serial communication using UART.
    - Applications: Communication with sensors, modules, or other microcontrollers.
 
-### 10. **Watchdog Timer**
+### 11. **Watchdog Timer**
    - Explains how to configure and use the Watchdog Timer to reset the system in case of a software fault.
    - Applications: System reliability and fault recovery.
 
@@ -64,7 +68,7 @@ These resources are located in the `Datasheet` folder and are invaluable for bot
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your_username/NXP_LPC1768.git
+   git clone https://github.com/Somya1041/NXP_LPC1768.git
    ```
 2. Navigate to the desired section to explore code examples and project files.
 3. Follow the instructions provided in each section's folder to set up and run the examples.
