@@ -110,10 +110,10 @@ The repository is organized into multiple sections, each demonstrating the funct
    - `uart0.h`: This is the header file that defines UART0 communication on the LPC1768 microcontroller, declaring functions for initializing UART, transmitting and receiving bytes and strings, handling delays, and sending a newline character. It sets up the necessary functionality for serial communication.
 
    #### Functions Definition File:
-   - `uart0_def.c`: This is the function definition file that implements UART0 communication functions for the LPC1768 microcontroller, including initialization, transmitting and receiving bytes, sending strings, and handling delays. It also includes a function to transmit a newline character and configure the UART with specific settings like baud rate, data bits, and stop bits.
+   - `uart0_def.c`: This is the function definition file that implements UART0 communication functions for the LPC1768 microcontroller, including initialization (`uart0_init`), transmitting (`uart0_byte_transmit`) and receiving bytes (`uart0_byte_receive`), sending strings (`uart0_str_transmit`), and handling delays (`delay`). It also includes a function to transmit a newline character (`new_line`) and configure the UART with specific settings like baud rate, data bits, and stop bits.
 
    #### Application File:
-   - `uart_app.c`: The code initializes UART0 communication on the LPC1768 microcontroller and transmits a character, a string, and a formatted float value via UART. It uses the functions from the  ``uart0.h`` library to handle byte and string transmission, with delays between each transmission.
+   - `uart_app.c`: The code initializes UART0 communication on the LPC1768 microcontroller and transmits a character, a string, and a formatted float value via UART. It uses the functions from the  `uart0.h` library to handle byte and string transmission, with delays between each transmission.
    
    - Applications: Communication with sensors, modules, or other microcontrollers.
 
