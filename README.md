@@ -88,10 +88,33 @@ The repository is organized into multiple sections, each demonstrating the funct
 
 ### 9. **Timer**
    - Showcases the use of timers for generating delays, measuring time intervals, and periodic task execution.
+   - This section contains two files and one Real Time Clock (RTC) folder, which includes files that uses RTC as clock signal to configure timer.
+      - `timer0_delay.c`: This code initializes Timer-0 with a 2-second delay using a specified timer count and a repeat mode. It sets up GPIO1 pins to control all LEDs and toggles them on and off at regular intervals. The timer's interrupt flag is checked to determine when the delay has elapsed, at which point the LEDs are toggled and the timer is reset.
+      - `timer_seq.c`: This code configures Timer-0 to generate multiple time intervals (1s, 5s, 8s, and 10s) and uses these intervals to sequentially turn on different LEDs connected to GPIO1 pins. It checks the timer interrupt flags to determine when to toggle each LED and ensure proper timing and sequencing. The LEDs are turned on one by one, with all LEDs lit at the final interval.
+
+   ### Real Time Clock (RTC) Folder:
+      - `rtc.c`: This code initializes the RTC (Real-Time Clock) on the LPC1768 microcontroller, setting a specific time and date. It then continuously reads the current time and date from the RTC, formats the values, and displays them on an LCD. The time is displayed on the first line and the date on the second line of the LCD.
+      - `rtc_alarm.c`: This code configures the RTC (Real-Time Clock) on the LPC1768 microcontroller to set a specific time and date, with an alarm set to trigger at midnight. It continuously displays the current time and date on an LCD. When the time matches the alarm time, the buzzer is activated.
+      - `rtc_new_year.c`: This code configures the RTC on the LPC1768 microcontroller to set the time and date, with an alarm set to trigger at midnight. When the current time matches the alarm time, the buzzer is activated, and a "HAPPY NEW YEAR!" message is displayed on the LCD. The buzzer is turned off otherwise.
+   
    - Applications: Time-sensitive operations, event scheduling, and real-time applications.
 
 ### 10. **UART (Universal Asynchronous Receiver-Transmitter)**
    - Demonstrates serial communication using UART.
+   - This section contains two files and one application folder, which includes an application file that uses the header and functions definition file that are defined separately.
+      - `uart0_rx.c`:
+      - `uart0_tx.c`:
+
+   ### Application Folder:
+      #### Header File:
+      - `uart0.h`:
+
+      #### Functions Definition File:
+      - `uart0_def.c`:
+
+      #### Application File:
+      - `uart_app.c`:
+   
    - Applications: Communication with sensors, modules, or other microcontrollers.
 
 ### 11. **Watchdog Timer**
