@@ -93,9 +93,9 @@ The repository is organized into multiple sections, each demonstrating the funct
       - `timer_seq.c`: This code configures Timer-0 to generate multiple time intervals (1s, 5s, 8s, and 10s) and uses these intervals to sequentially turn on different LEDs connected to GPIO1 pins. It checks the timer interrupt flags to determine when to toggle each LED and ensure proper timing and sequencing. The LEDs are turned on one by one, with all LEDs lit at the final interval.
 
    ### Real Time Clock (RTC) Folder:
-      - `rtc.c`: This code initializes the RTC (Real-Time Clock) on the LPC1768 microcontroller, setting a specific time and date. It then continuously reads the current time and date from the RTC, formats the values, and displays them on an LCD. The time is displayed on the first line and the date on the second line of the LCD.
-      - `rtc_alarm.c`: This code configures the RTC (Real-Time Clock) on the LPC1768 microcontroller to set a specific time and date, with an alarm set to trigger at midnight. It continuously displays the current time and date on an LCD. When the time matches the alarm time, the buzzer is activated.
-      - `rtc_new_year.c`: This code configures the RTC on the LPC1768 microcontroller to set the time and date, with an alarm set to trigger at midnight. When the current time matches the alarm time, the buzzer is activated, and a "HAPPY NEW YEAR!" message is displayed on the LCD. The buzzer is turned off otherwise.
+   - `rtc.c`: This code initializes the RTC (Real-Time Clock) on the LPC1768 microcontroller, setting a specific time and date. It then continuously reads the current time and date from the RTC, formats the values, and displays them on an LCD. The time is displayed on the first line and the date on the second line of the LCD.
+   - `rtc_alarm.c`: This code configures the RTC (Real-Time Clock) on the LPC1768 microcontroller to set a specific time and date, with an alarm set to trigger at midnight. It continuously displays the current time and date on an LCD. When the time matches the alarm time, the buzzer is activated.
+   - `rtc_new_year.c`: This code configures the RTC on the LPC1768 microcontroller to set the time and date, with an alarm set to trigger at midnight. When the current time matches the alarm time, the buzzer is activated, and a "HAPPY NEW YEAR!" message is displayed on the LCD. The buzzer is turned off otherwise.
    
    - Applications: Time-sensitive operations, event scheduling, and real-time applications.
 
