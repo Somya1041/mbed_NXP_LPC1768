@@ -58,7 +58,7 @@ The repository is organized into multiple sections, each demonstrating the funct
    - This section contains two file:
       - `switch.c`: This code configures a GPIO pin to control a buzzer and another pin to read the state of a switch on the LPC1768 microcontroller. When the switch is pressed (input high), the buzzer is turned on; otherwise, the buzzer is turned off.
       - `two_switch.c`: This code configures two switches (SW1 and SW2) and a buzzer along with a set of LEDs on the LPC1768 microcontroller. When SW1 is pressed, the buzzer is turned on, and when SW2 is pressed, all the LEDs are turned on; otherwise, both the buzzer and LEDs are turned off.
-      
+
    - Applications: User inputs, control panels, and interactive systems.
 
 ### 9. **Timer**
@@ -71,6 +71,9 @@ The repository is organized into multiple sections, each demonstrating the funct
 
 ### 11. **Watchdog Timer**
    - Explains how to configure and use the Watchdog Timer to reset the system in case of a software fault.
+   - This section contains one file:
+      - `watchdog_timer.c`: This code configures the Watchdog Timer (WDT) on the LPC1768 microcontroller to reset the system if not reloaded within 4 seconds. It also controls a buzzer and a set of LEDs, blinking the LEDs at regular intervals and briefly turning on the buzzer at startup. The WDT is periodically reloaded to prevent a system reset.
+
    - Applications: System reliability and fault recovery.
 
 ---
