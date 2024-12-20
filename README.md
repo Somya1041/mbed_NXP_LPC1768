@@ -6,7 +6,7 @@ The repository is organized into multiple sections, each demonstrating the funct
 
 ---
 
-## Repository Sections
+## Walkthrough of Repository Sections
 
 ### 1. **ADC (Analog-to-Digital Converter)**
    - Demonstrates the use of the LPC1768's built-in ADC module to convert analog signals into digital values.
