@@ -19,7 +19,7 @@ The repository is organized into several sections, each showcasing how to use an
 ### 2. **Buzzer**
    - Explains how to control a buzzer using GPIO pins on the LPC1768.
    - This section contains two file:
-      - `buzzer.c`: This code toggles a buzzer connected to pin P1.27 of the LPC1768 microcontroller by setting and clearing the GPIO pin in a loop with a 250 ms delay. This creates a periodic on-off sound from the buzzer.
+      - `buzzer.c`: This code toggles a buzzer connected to pin P1.27 of the LPC1768 microcontroller by setting and clearing the **GPIO** pin in a loop with a 250 ms delay. This creates a periodic on-off sound from the buzzer.
       - `rand_buzzer.c`: This code controls a buzzer connected to pin P1.27 of the LPC1768 microcontroller, toggling it on and off with random delays between 100 ms and 1000 ms. It generates 10 iterations of random on-off patterns using the `rand()` function for the delay intervals.
 
    - Applications: Audio notifications, alarms, and feedback systems.
@@ -31,7 +31,7 @@ The repository is organized into several sections, each showcasing how to use an
       - `count.h`: This is the header file which contains macros definition for the control and data pins, along with function prototypes for delay, sending commands, writing data, writing strings, and initializing the LCD. These functions enable interaction with the LCD for displaying information.
 
       ### Functions Definition File:
-      - `count_def.c`: This is the function definition file that defines the functions for sending commands (`cmd_reg`), writing data (`data_reg`), displaying strings (`string_write`), and initializing the LCD (`lcd_init`). Additionally, it uses a delay function to ensure proper timing for LCD operations.
+      - `count_def.c`: This is the function definition file that defines the functions for sending commands (`cmd_reg`), writing data (`data_reg`), displaying strings (`string_write`), and initializing the LCD (`lcd_init`). Additionally, it uses a delay function (`delay`) to ensure proper timing for LCD operations.
 
       ### Application Files: 
       - `count_app.c`: This is the application file which initializes an LCD and displays a 2-digit counter on it, incrementing the count every 100 milliseconds. The counter resets to 0 after reaching 99, and the LCD cursor is repositioned to overwrite the previous count.
@@ -50,7 +50,7 @@ The repository is organized into several sections, each showcasing how to use an
       - `lcd.h`: This is the header file that defines function prototypes to control an LCD display using GPIO pins on the LPC1768 microcontroller. It includes function prototypes for sending commands, displaying data, and initializing the LCD. The LCD control uses 8-bit mode for communication with the display, and delay functions are used for timing control.
          
       #### Functions Definition File:
-      - `lcd_def.c`: This is the function definition file that defines the functions for sending commands (`cmd_reg`), writing data (`data_reg`), displaying strings (`string_write`), and initializing the LCD (`lcd_init`). Additionally, it uses a delay function to ensure proper timing for LCD operations.
+      - `lcd_def.c`: This is the function definition file that defines the functions for sending commands (`cmd_reg`), writing data (`data_reg`), displaying strings (`string_write`), and initializing the LCD (`lcd_init`). Additionally, it uses a delay function (`delay`) to ensure proper timing for LCD operations.
          
       #### Application File:
       - `lcd_app.c`: This is the application file that initializes the LCD display, sets it to 8-bit mode, and displays the names "SOMYA ANAND" and "SUNNY KR" on two lines. It includes a 2-second delay between the names and clears the screen after displaying them. The display operates with basic commands for setting the cursor and clearing the screen.
@@ -68,21 +68,21 @@ The repository is organized into several sections, each showcasing how to use an
 ### 6. **Pulse Width Modulation (PWM)**
    - Demonstrates generating PWM signals using the LPC1768.
    - This section contains two file:
-      - `pwm_single_edge.c`: This code configures PWM1 on the LPC1768 microcontroller to generate a PWM signal with varying duty cycles (20%, 40%, 60%, and 80%) at a frequency of 100 Hz. It repeatedly adjusts the duty cycle by modifying the value of the matching register (MR2) and enables the changes through the LER register, creating a pattern of different duty cycles over time.
-      - `pwm_double_edge.c`: This code configures PWM1 on the LPC1768 microcontroller to generate a PWM signal with varying duty cycles (20%, 40%, 60%, and 70%) at a frequency of 100 Hz, using double-edge mode for PWM1. It continuously adjusts the signal's rising and falling edges by modifying the matching registers (MR1 and MR2), creating a pattern of different duty cycles over time.
+      - `pwm_single_edge.c`: This code configures PWM1 on the LPC1768 microcontroller to generate a PWM signal with varying duty cycles (20%, 40%, 60%, and 80%) at a frequency of 100 Hz. It repeatedly adjusts the duty cycle by modifying the value of the Match Register (MR2) and enables the changes through the **LER register**, creating a pattern of different duty cycles over time.
+      - `pwm_double_edge.c`: This code configures PWM1 on the LPC1768 microcontroller to generate a PWM signal with varying duty cycles (20%, 40%, 60%, and 70%) at a frequency of 100 Hz, using double-edge mode for PWM1. It continuously adjusts the signal's rising and falling edges by modifying the Match Registers (MR1 and MR2), creating a pattern of different duty cycles over time.
 
    - Applications: Motor control, LED brightness control, and power management.
 
 ### 7. **Serial Peripheral Interface (SPI)**
    - Explains how to configure and use the SPI protocol on the LPC1768 for communication with SPI-compatible devices.
    - This section contains three files and one application folder, which includes an application file that uses the header and functions definition file that are defined separately.
-      - `spi_decode.c`: This code demonstrates interfacing the LPC1768 microcontroller with a 7-segment display controller using SSP  (Synchronous Serial Port) in SPI mode. It initializes the SSP module, configures GPIO pins for SPI communication, and sets the display's operational parameters, such as normal mode (shutdown register), maximum intensity, and **decode mode** for digits 0 to 3. The main loop sends data to display specific digits (1, 7, 6, 8) on the 7-segment display for 1 second, followed by blanking the display for another second, creating a simple alternating pattern.
+      - `spi_decode.c`: This code demonstrates interfacing the LPC1768 microcontroller with a 7-segment display controller using **SSP (Synchronous Serial Port)** in SPI mode. It initializes the SSP module, configures GPIO pins for SPI communication, and sets the display's operational parameters, such as normal mode (shutdown register), maximum intensity, and **decode mode** for digits 0 to 3. The main loop sends data to display specific digits (1, 7, 6, 8) on the 7-segment display for 1 second, followed by blanking the display for another second, creating a simple alternating pattern.
       - `spi_nondec.c`: This code uses SPI communication in SSP mode to interface an LPC1768 microcontroller with a 7-segment display controller. It initializes the SSP module, configures GPIO pins, and sets up the display for normal operation, maximum intensity, and **non-decode mode** for digits 0, 1, and 2. The main loop alternates between displaying "L", "P", and "C" on the display and blanking it, with a 1-second delay between each state. The `ssp_spi_write` function manages data transmission to the display, while `delay_ms` provides timing delays.
       - `spi_dec_nondec.c`: This code demonstrates an LPC1768 microcontroller with a 7-segment display controller via SPI in SSP mode. It initializes the SPI interface, sets GPIO configurations, and prepares the display for operation with both non-decode and decode modes. In the main loop, it alternates between displaying **"LPC" in non-decode mode** and the numbers **"1768" in decode mode**, with a 1-second delay between each state. The `ssp_spi_write` function facilitates data transmission to the display, while the `delay_ms` function introduces timing delays. This program demonstrates dynamic display updates using SPI communication.
 
       ### Application Folder:
       #### Header File:
-      - `spi.h`: This is the header file that provides the necessary declarations for implementing SPI communication using the SSP1 module of the LPC1768 microcontroller. It includes the LPC1768 library, defines the chip select (CS) pin as `P0.6`, and declares functions for initializing the SSP1 module (`ssp_spi_init`), transmitting 16-bit data (`ssp_spi_write`), and generating delays (`delay`). This file serves as a modular interface for enabling and managing SPI communication with connected devices.
+      - `spi.h`: This is the header file that provides the necessary declarations for implementing SPI communication using the SSP1 module of the LPC1768 microcontroller. It includes the LPC1768 library, defines the **chip select (CS)** pin as `P0.6`, and declares functions for initializing the SSP1 module (`ssp_spi_init`), transmitting 16-bit data (`ssp_spi_write`), and generating delays (`delay`). This file serves as a modular interface for enabling and managing SPI communication with connected devices.
 
       #### Functions Definition File:
       - `spi_def.c`: This is the function definition file that implements SPI communication for the LPC1768 microcontroller using the SSP1 module. The `ssp_spi_init` function configures the SSP1 module, including setting the GPIO pin `P0.6` for chip select (CS), enabling SSP1, selecting SPI mode 0, and configuring a clock speed of 50 KHz. The `ssp_spi_write` function facilitates data transmission by connecting to the slave device, writing a 16-bit data word, and waiting for the transfer to complete before disconnecting the slave. The `delay` function generates a software delay based on nested loops for timing purposes. Together, these functions enable communication between the microcontroller and an SPI-compatible device.
@@ -107,7 +107,7 @@ The repository is organized into several sections, each showcasing how to use an
       - `timer_seq.c`: This code configures Timer-0 to generate multiple time intervals (1s, 5s, 8s, and 10s) and uses these intervals to sequentially turn on different LEDs connected to GPIO1 pins. It checks the timer interrupt flags to determine when to toggle each LED and ensure proper timing and sequencing. The LEDs are turned on one by one, with all LEDs lit at the final interval.
 
       ### Real Time Clock (RTC) Folder:
-      - `rtc.c`: This code initializes the RTC (Real-Time Clock) on the LPC1768 microcontroller, setting a specific time and date. It then continuously reads the current time and date from the RTC, formats the values, and displays them on an LCD. The time is displayed on the first line and the date on the second line of the LCD.
+      - `rtc.c`: This code initializes the **RTC (Real-Time Clock)** on the LPC1768 microcontroller, setting a specific time and date. It then continuously reads the current time and date from the RTC, formats the values, and displays them on an LCD. The time is displayed on the first line and the date on the second line of the LCD.
       - `rtc_alarm.c`: This code configures the RTC (Real-Time Clock) on the LPC1768 microcontroller to set a specific time and date, with an alarm set to trigger at midnight. It continuously displays the current time and date on an LCD. When the time matches the alarm time, the buzzer is activated.
       - `rtc_new_year.c`: This code configures the RTC on the LPC1768 microcontroller to set the time and date, with an alarm set to trigger at midnight. When the current time matches the alarm time, the buzzer is activated, and a "HAPPY NEW YEAR!" message is displayed on the LCD. The buzzer is turned off otherwise.
    
