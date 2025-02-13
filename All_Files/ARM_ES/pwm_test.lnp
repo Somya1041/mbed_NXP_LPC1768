@@ -1,0 +1,4 @@
+--device DARMP1 "startup_lpc17xx.o" "lcd_def.o" "pwm_double_edge.o" --strict --scatter "pwm_test.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\pwm_test.map" -o "pwm_test.axf"

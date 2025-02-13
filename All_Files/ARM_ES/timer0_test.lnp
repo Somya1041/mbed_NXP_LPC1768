@@ -1,0 +1,4 @@
+--device DARMP1 "startup_lpc17xx.o" "watch_dog_timer.o" "lcd_def.o" --strict --scatter "timer0_test.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\timer0_test.map" -o "timer0_test.axf"

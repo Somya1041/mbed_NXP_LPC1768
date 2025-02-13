@@ -1,0 +1,4 @@
+--device DARMP1 "startup_lpc17xx.o" "lcd_def.o" "lcd_app.o" --strict --scatter "lcd_test.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\lcd_test.map" -o "lcd_test.axf"
