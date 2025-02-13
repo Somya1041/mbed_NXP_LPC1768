@@ -1,0 +1,4 @@
+--device DARMP1 "startup_lpc17xx.o" "main.o" --strict --scatter "Smart_Effective_Toll_System.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Smart_Effective_Toll_System.map" -o "Smart_Effective_Toll_System.axf"

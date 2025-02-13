@@ -1,0 +1,4 @@
+--device DARMP1 "startup_lpc17xx.o" "uart0_def.o" "adc_2_uart.o" --strict --scatter "ADC_test.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\ADC_test.map" -o "ADC_test.axf"
