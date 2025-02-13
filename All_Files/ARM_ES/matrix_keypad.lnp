@@ -1,4 +1,0 @@
---device DARMP1 "startup_lpc17xx.o" "lcd_def.o" "pass.o" --strict --scatter "matrix_keypad.sct" 
---autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
---info sizes --info totals --info unused --info veneers 
- --list ".\matrix_keypad.map" -o "matrix_keypad.axf"

@@ -1,4 +1,0 @@
---device DARMP1 "startup_lpc17xx.o" "pwm_motor.o" --strict --scatter "PWM_motor.sct" 
---autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
---info sizes --info totals --info unused --info veneers 
- --list ".\PWM_motor.map" -o "PWM_motor.axf"

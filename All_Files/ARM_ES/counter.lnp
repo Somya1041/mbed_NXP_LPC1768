@@ -1,4 +1,0 @@
---device DARMP1 "startup_lpc17xx.o" "count_def.o" "time_dis_app.o" --strict --scatter "counter.sct" 
---autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
---info sizes --info totals --info unused --info veneers 
- --list ".\counter.map" -o "counter.axf"
