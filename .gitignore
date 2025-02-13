@@ -1,0 +1,15 @@
+*.crf
+*.d
+*.o
+*.crf
+*.axf
+*.hex
+*.htm
+*.Inp
+*.map
+*.plg
+*.tra
+*.uvpot
+*.dep
+*.bak
+*.__i
